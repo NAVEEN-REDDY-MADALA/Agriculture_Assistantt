@@ -612,7 +612,7 @@ def get_crop_recommendations(location, season, soil_type):
 @st.cache_resource
 def load_model():
     try:
-        model = tf.keras.models.load_model('plant_disease_model_improved.h5')
+        model = tf.keras.models.load_model('best_model_phase1.h5')
         st.success(f"✅ Model loaded successfully! Input shape: {model.input_shape}")
         return model
     except Exception as e:
@@ -1230,3 +1230,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
